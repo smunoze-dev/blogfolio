@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "https://smunoze-dev.github.io"
+baseurl = "https://smunoze.github.io"
 languageCode = "en-us"
 title = "Hugo Theme Stack Starter"
 
