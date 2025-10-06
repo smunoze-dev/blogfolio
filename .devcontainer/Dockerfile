@@ -25,6 +25,9 @@ RUN apt-get update && apt-get install -y ca-certificates openssl git curl && \
     wget -O ${VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${VERSION}/${VARIANT}_${VERSION}_Linux-${ARCH}.tar.gz && \
     tar xf ${VERSION}.tar.gz && \
     mv hugo /usr/bin/hugo
+    apt-get install -y --no-install-recommends \
+    gcc-12 g++-12 && \
+    update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 60 --slave /usr/bin/g++ g++ /usr/bin/g++-12
 
 # Hugo dev server port
 EXPOSE 1313
